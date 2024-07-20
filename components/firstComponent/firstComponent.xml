@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="firstComponent" extends="Scene"> 
+  <script type="text/brightscript" uri="firstComponent.brs"/>
+
+	<children>
+      <Label 
+        id="myLabel" 
+      	/>
+    </children>
+</component>
