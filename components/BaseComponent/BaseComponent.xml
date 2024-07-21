@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BaseComponent" extends="Group"> 
+  <script type="text/brightscript" uri="BaseComponent.brs"/>
+
+	<children>
+
+    </children>
+</component>

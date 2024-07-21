@@ -1,19 +1,21 @@
 function init()
+  print "I am second component"
     m.top.setFocus(true)
-    m.myLabel = m.top.findNode("myLabel2")
-    
-    'Set the font size
-    m.myLabel.font.size=92
+    myLabel = m.top.findNode("myLabel2") 'findNode is a method to find a node in xml files
+    myLabel.text="This is my Second component."
+    mylabel.translation = [400,500]
 
-    'Set the color to light blue
-    m.myLabel.color="0x72D7EEFF"
-    m.myLabel.text="This is my second componenet"
-    positionLabel()
   end function
 
-  sub positionLabel()
-    boundigrect = m.myLabel.boundingRect()
-    posX = (1920-boundigrect.width) / 2
-    posY = (1080-boundigrect.height) / 2
-    m.myLabel.translation= [posX,posY]
-  end sub
+  function onKeyEvent(key as String, press as Boolean) as Boolean
+    print "in Second Component"; key
+    handled = false
+    if press then
+      if (key = "back")
+        handled = true
+      else if (key = "OK")
+        handled = false
+      end if
+    end if
+    return handled
+  end function

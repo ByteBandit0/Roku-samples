@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="TaskNode" extends="Scene"> 
+  <script type="text/brightscript" uri="TaskNode.brs"/>
+
+	<children>
+      <Label 
+        id="myLabel2" 
+      	/>
+    </children>
+</component>

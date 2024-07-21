@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="SecondComponent" extends="Scene"> 
-  <script type="text/brightscript" uri="SecondComponent.brs"/>
+<component name="secondComponent" extends="Group"> 
+  <script type="text/brightscript" uri="secondComponent.brs"/>
+    <interface>
+      <field id = "valueToShare" type = "string"/>
+    </interface>
 
 	<children>
       <Label 

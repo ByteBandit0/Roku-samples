@@ -12,7 +12,7 @@ sub Main()
     m.port = CreateObject("roMessagePort") 'A medium to listen any change on assigned component.
     screen.setMessagePort(m.port) ' setMessagePort is used to assign listener on given component. Here we are listening for any change in screen comopnent which is our base screen.
     'Create a scene and load /components/helloworld.xml'
-    scene = screen.CreateScene("SecondComponent") 'creates a scene which will be visible to user : CreateScene() is a method
+    screen.CreateScene("mainScene") 'creates a scene which will be visible to user : CreateScene() is a method
     screen.show() 'show() is a method to render HellopwWorld on screen
 
     while(true)
