@@ -1,7 +1,10 @@
 function init()
     print "in firsat component"
+    m.playButton = m.top.findNode("playButton")
+    m.playButton2 = m.top.findNode("playButton2")
     m.top.focusable = true
     m.top.setFocus(true)
+    m.playButton.setFocus(true)
     myLabel = m.top.findNode("myLabel1") 'findNode is a method to find a node in xml files
     m.testPoster = m.top.findNode("testPoster")
 
@@ -20,7 +23,31 @@ function init()
     m.testPoster.height = 400
     m.testPoster.width = 400
     m.testPoster.translation = [400,0]
+
+    m.playButton.observeField("buttonSelected","onButtonSelected")
+    m.playButton2.observeField("buttonSelected","showVideo")
+
+
+
+    createButton()
 end function
+
+sub createButton()
+  button = CreateObject("roSgNode","Button")
+  button.text="Dynamic Button"
+  button.showFocusFootprint="true"
+  button.height="100"
+  button.focusediconUri="nil.png"
+  button.IconUri="nil.png"
+  button.textColor="0xFF00FF"
+
+  m.top.appendChild(button)
+
+end sub
+
+sub onButtonSelected()
+  print "Fake button selected!"
+end sub
 
 
 
@@ -40,15 +67,12 @@ end sub
 
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
-  print "in first Component"
   handled = true
   if press then
-    if (key = "back")
-      m.top.removeChild(m.video)
-      handled = true
-    else if (key = "OK")
-      showVIdeo()
-      handled = false
+    if (key = "up")
+      if m.playButton2.hasFocus() then m.playButton.setFocus(true)
+    else if (key = "down")
+      if m.playButton.hasFocus() then m.playButton2.setFocus(true)
     end if
   end if
   return handled

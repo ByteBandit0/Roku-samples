@@ -9,5 +9,24 @@
         <poster
           id="testPoster"
         />
+        <Button
+          id="playButton"
+          text="Fake Play"
+          showFocusFootprint="true"
+          height="100"
+          focusediconUri="nil.png"
+          IconUri="nil.png"
+          textColor="0xFF00FF"
+        />
+        <Button
+          id="playButton2"
+          text="Play"
+          showFocusFootprint="true"
+          height="100"
+          focusediconUri="nil.png"
+          IconUri="nil.png"
+          textColor="0xFF00FF"
+          translation="[0,200]"
+        />
     </children>
 </component>

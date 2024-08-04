@@ -6,7 +6,13 @@ function init()
     ' secondComponent =createObject("roSgNode","secondComponent")
     ' m.top.appendChild(secondComponent)
 
+
+    print m.top
   end function
+
+  sub calculateSum(a as object)
+   print a
+  end sub
 
   function onKeyEvent(key as String, press as Boolean) as Boolean
     m.firstComponent.setFocus(true)
